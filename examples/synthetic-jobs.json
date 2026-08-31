@@ -1,0 +1,31 @@
+[
+  {
+    "id": "job-demo-001",
+    "title": "Applied AI Engineer",
+    "company": "Example Labs",
+    "location": "Remote",
+    "employmentType": "full-time",
+    "source": "synthetic-board-a",
+    "sourceUrl": "https://example.invalid/jobs/1",
+    "skills": [
+      "python",
+      "rag",
+      "fastapi",
+      "typescript"
+    ]
+  },
+  {
+    "id": "job-demo-002",
+    "title": "AI Platform Engineer",
+    "company": "Sample Systems",
+    "location": "Chicago, IL",
+    "employmentType": "full-time",
+    "source": "synthetic-board-b",
+    "sourceUrl": "https://example.invalid/jobs/2",
+    "skills": [
+      "python",
+      "postgresql",
+      "docker"
+    ]
+  }
+]
