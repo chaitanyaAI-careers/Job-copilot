@@ -1,0 +1,17 @@
+{
+  "id": "candidate-demo-001",
+  "targetTitles": [
+    "Applied AI Engineer",
+    "AI Platform Engineer"
+  ],
+  "skills": [
+    "python",
+    "fastapi",
+    "rag",
+    "typescript"
+  ],
+  "preferredLocations": [
+    "remote"
+  ],
+  "minimumMatchScore": 60
+}
