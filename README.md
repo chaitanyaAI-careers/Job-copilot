@@ -1,3 +1,5 @@
+![Project header](docs/branding/readme-header.png)
+
 # Job Copilot
 
 ### Full-Stack Product Engineering · Job Ingestion · Matching · Application Workflows · AI-Assisted Career Intelligence
