@@ -80,6 +80,10 @@ This architecture makes pipeline decisions explicit instead of hiding them insid
 
 ---
 
+![Job Copilot evidence-aware architecture](docs/architecture/job-copilot-architecture.svg)
+
+---
+
 ## Publicly Implemented Capabilities
 
 ### Job Domain Contracts
