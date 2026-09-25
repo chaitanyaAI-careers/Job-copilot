@@ -353,7 +353,7 @@ The public repository intentionally does not reproduce the complete private prod
 
 ## Data Model Context
 
-The private product uses relational modeling for major entities such as:
+The following are conceptual data areas in the private product, not a count or one-to-one list of Prisma models (the private schema is not public):
 
 - users
 - candidate profiles
