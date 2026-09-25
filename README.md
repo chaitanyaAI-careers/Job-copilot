@@ -353,22 +353,7 @@ The public repository intentionally does not reproduce the complete private prod
 
 ## Data Model Context
 
-The following are conceptual data areas in the private product, not a count or one-to-one list of Prisma models (the private schema is not public):
-
-- users
-- candidate profiles
-- preferences
-- resumes
-- companies
-- job sources
-- jobs
-- job snapshots
-- resume-job analyses
-- applications
-- application events
-- connector runs
-- audit events
-- privacy / consent records
+The broader private Job Copilot product is described as using an **11-entity relational model**. The private Prisma schema and entity definitions are not published in this repository, so the model count is a private-product claim rather than a publicly verifiable count.
 
 The public showcase keeps only simplified domain contracts needed to explain the architecture safely.
 
