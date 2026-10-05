@@ -2,16 +2,19 @@
 
 Candidate and application data can contain sensitive personal information.
 
-The platform design therefore emphasizes:
+The platform design emphasizes:
 
 - authenticated access
 - user-scoped records
-- secure password handling
-- environment-based secrets
+- OAuth2/OIDC/JWT identity patterns
+- SSO-ready integration boundaries
 - least-privilege access
-- rate limiting
-- privacy controls
+- environment-based secrets
+- privacy and consent boundaries
 - auditability
 - separation of development and production data
+- deterministic authorization over state-changing operations
 
-The public repository contains only synthetic data and no production credentials.
+AI assistance does not become an authorization mechanism or source of truth.
+
+The public repository contains only synthetic data and no production credentials, private Prisma schema, production tokens, or deployment secrets.
