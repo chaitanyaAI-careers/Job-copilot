@@ -4,48 +4,47 @@
 
 Job ingestion is not complete when an HTTP request returns records.
 
-A useful production-style pipeline must also reason about source policy, normalization, freshness, duplicates, operational limits, and failures.
+A production-oriented pipeline must reason about source policy, normalization, freshness, duplicates, retries, event processing, observability, and authoritative state.
 
-## Implemented Reliability Foundations
+## Verified Broader Reliability Foundations
 
-The private Job Copilot project currently contains engineering around:
+The private Job Copilot implementation includes engineering around:
 
 - normalized connector output
 - complete board fetching
-- source ownership
-- source attribution
+- source ownership and attribution
 - job freshness observations
-- feed freshness filtering
+- trusted feed-freshness filtering
 - cross-source deduplication
-- board discovery
-- board probing
 - governed scheduled imports
-- connector run tracking
-- import limits
+- connector-run tracking
 - employment-arrangement normalization
-- deterministic pipeline verification scripts
+- Redis-backed workers
+- Kafka event-driven ingestion and workflow events
+- PostgreSQL / Prisma durable state
+- deterministic pipeline verification
+- identity and permission boundaries
+- observable model/provider execution for AI-assisted paths
 
 ## Freshness
 
 A database `updatedAt` value is not sufficient evidence that an external listing remains current.
 
-The architecture tracks source observations separately and applies freshness rules against those observations.
+Source observations are tracked separately and evaluated through freshness rules.
 
-The Career showcase demonstrates three states:
+The public showcase demonstrates:
 
 - `fresh`
 - `stale`
 - `unknown`
 
-Only trusted fresh observations are treated as feed-ready by the simplified example.
+Only trusted fresh observations are feed-ready in the simplified contract.
 
 ## Cross-Source Deduplication
 
 Different ATS providers can expose the same logical job through different source identifiers or URLs.
 
-Deduplication therefore operates after normalization and should compare stable identity signals rather than source IDs alone.
-
-The Career showcase demonstrates normalized company/title/location fingerprints and deterministic batch deduplication.
+Deduplication therefore operates after normalization and uses stable identity signals instead of relying only on provider IDs.
 
 ## Connector Policy
 
@@ -58,21 +57,12 @@ Connector policy evaluates:
 - allowed uses
 - import eligibility
 
-The recruiter-safe implementation blocks sources that are inactive, under review, higher-risk, or not explicitly approved for import.
+## State and AI Boundary
 
-## Pipeline Decisions
+Deterministic state remains authoritative for ingestion decisions, freshness, deduplication, permissions, consent, application transitions, and persistence.
 
-The Career showcase provides an executable ingestion contract:
+AI assistance is observable and bounded; it does not silently mutate authoritative product state.
 
-```text
-Candidate Record
-      ↓
-Normalize
-      ↓
-Connector Eligibility
-      ↓
-Freshness
-      ↓
-Accept / Reject
-      ↓
-Deduplicate Accepted Jobs
+## Evidence Boundary
+
+The public repository demonstrates deterministic contracts and 19 Vitest cases across seven files. The broader runtime and deployment layers described above are maintained privately.
