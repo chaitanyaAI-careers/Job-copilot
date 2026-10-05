@@ -1,106 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Job Copilot evidence-aware architecture</title>
-  <desc id="desc">Architecture showing public recruiter-safe implementation, broader private product implementation, and in-progress strengthening work for Job Copilot.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#07111f"/>
-      <stop offset="1" stop-color="#0b1630"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity=".28"/>
-    </filter>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#6ea8fe"/>
-    </marker>
-    <style>
-      .title{font:700 30px Inter,Arial,sans-serif;fill:#f8fbff}
-      .subtitle{font:400 15px Inter,Arial,sans-serif;fill:#9fb1c8}
-      .section{font:700 15px Inter,Arial,sans-serif;letter-spacing:.08em}
-      .boxTitle{font:700 15px Inter,Arial,sans-serif;fill:#f8fbff}
-      .boxText{font:400 12.5px Inter,Arial,sans-serif;fill:#c9d6e7}
-      .small{font:400 11.5px Inter,Arial,sans-serif;fill:#9fb1c8}
-      .legend{font:600 12px Inter,Arial,sans-serif;fill:#dce7f5}
-      .public{stroke:#38d39f}
-      .private{stroke:#8b7cf6}
-      .progress{stroke:#f6b84a}
-      .pipe{stroke:#6ea8fe;stroke-width:2.4;fill:none;marker-end:url(#arrow)}
-    </style>
-  </defs>
-
-  <rect width="1200" height="760" rx="24" fill="url(#bg)"/>
-  <rect x="30" y="28" width="1140" height="704" rx="22" fill="#0b1627" stroke="#1f3655"/>
-
-  <text x="58" y="72" class="title">Job Copilot</text>
-  <text x="58" y="98" class="subtitle">Evidence-aware product architecture · public implementation separated from broader private work</text>
-
-  <g transform="translate(730 44)">
-    <text x="0" y="0" class="section" fill="#d9e6f7">EVIDENCE STATUS</text>
-    <circle cx="8" cy="24" r="6" fill="#38d39f"/><text x="22" y="28" class="legend">● Implemented — Public</text>
-    <circle cx="194" cy="24" r="6" fill="#8b7cf6"/><text x="208" y="28" class="legend">◆ Implemented — Private</text>
-    <circle cx="390" cy="24" r="6" fill="#f6b84a"/><text x="404" y="28" class="legend">◐ In Progress</text>
-  </g>
-
-  <text x="58" y="145" class="section" fill="#52e0b0">● PUBLIC RECRUITER-SAFE SHOWCASE</text>
-
-  <g filter="url(#shadow)">
-    <rect x="58" y="168" width="170" height="122" rx="14" fill="#0d2130" stroke-width="2" class="public"/>
-    <text x="76" y="194" class="boxTitle">Raw Job + Source</text>
-    <text x="76" y="220" class="boxText"><tspan x="76" dy="0">Synthetic input</tspan><tspan x="76" dy="18">Source attribution</tspan><tspan x="76" dy="18">Connector policy context</tspan></text>
-
-    <rect x="258" y="168" width="170" height="122" rx="14" fill="#0d2130" stroke-width="2" class="public"/>
-    <text x="276" y="194" class="boxTitle">Normalize</text>
-    <text x="276" y="220" class="boxText"><tspan x="276" dy="0">normalizeJob()</tspan><tspan x="276" dy="18">Employment type</tspan><tspan x="276" dy="18">Skills / URL / fields</tspan></text>
-
-    <rect x="458" y="168" width="170" height="122" rx="14" fill="#0d2130" stroke-width="2" class="public"/>
-    <text x="476" y="194" class="boxTitle">Governed Ingestion</text>
-    <text x="476" y="220" class="boxText"><tspan x="476" dy="0">Connector eligibility</tspan><tspan x="476" dy="18">Fresh / stale / unknown</tspan><tspan x="476" dy="18">Accept / reject + reason</tspan></text>
-
-    <rect x="658" y="168" width="170" height="122" rx="14" fill="#0d2130" stroke-width="2" class="public"/>
-    <text x="676" y="194" class="boxTitle">Deduplicate</text>
-    <text x="676" y="220" class="boxText"><tspan x="676" dy="0">Cross-source fingerprint</tspan><tspan x="676" dy="18">company | title | location</tspan><tspan x="676" dy="18">Normalized job batch</tspan></text>
-
-    <rect x="858" y="168" width="170" height="122" rx="14" fill="#0d2130" stroke-width="2" class="public"/>
-    <text x="876" y="194" class="boxTitle">Deterministic Match</text>
-    <text x="876" y="220" class="boxText"><tspan x="876" dy="0">calculateMatch()</tspan><tspan x="876" dy="18">Score + matched skills</tspan><tspan x="876" dy="18">Missing skills</tspan></text>
-
-    <rect x="1058" y="168" width="84" height="122" rx="14" fill="#0d2130" stroke-width="2" class="public"/>
-    <text x="1071" y="194" class="boxTitle">React UI</text>
-    <text x="1071" y="220" class="boxText"><tspan x="1071" dy="0">JobMatch</tspan><tspan x="1071" dy="18">Card</tspan><tspan x="1071" dy="18">example</tspan></text>
-  </g>
-
-  <path d="M228 229 H250" class="pipe"/><path d="M428 229 H450" class="pipe"/><path d="M628 229 H650" class="pipe"/><path d="M828 229 H850" class="pipe"/><path d="M1028 229 H1050" class="pipe"/>
-
-  <rect x="58" y="316" width="1084" height="78" rx="14" fill="#0c1b2a" stroke="#244462"/>
-  <text x="78" y="344" class="boxTitle">Public verification</text>
-  <text x="78" y="370" class="boxText">19 Vitest cases across 7 test files · TypeScript type checking · GitHub Actions CI · synthetic examples · no production credentials</text>
-
-  <text x="58" y="440" class="section" fill="#a79cff">◆ BROADER PRIVATE PRODUCT IMPLEMENTATION</text>
-
-  <g filter="url(#shadow)">
-    <rect x="58" y="462" width="210" height="116" rx="14" fill="#17152d" stroke-width="2" class="private"/>
-    <text x="78" y="490" class="boxTitle">Web Application</text>
-    <text x="78" y="516" class="boxText"><tspan x="78" dy="0">Next.js / React</tspan><tspan x="78" dy="18">Candidate profiles</tspan><tspan x="78" dy="18">Job browsing</tspan></text>
-
-    <rect x="286" y="462" width="210" height="116" rx="14" fill="#17152d" stroke-width="2" class="private"/>
-    <text x="306" y="490" class="boxTitle">Persistence</text>
-    <text x="306" y="516" class="boxText"><tspan x="306" dy="0">PostgreSQL / Prisma</tspan><tspan x="306" dy="18">Jobs / snapshots</tspan><tspan x="306" dy="18">Application state</tspan></text>
-
-    <rect x="514" y="462" width="210" height="116" rx="14" fill="#17152d" stroke-width="2" class="private"/>
-    <text x="534" y="490" class="boxTitle">Product Workflows</text>
-    <text x="534" y="516" class="boxText"><tspan x="534" dy="0">Authentication foundations</tspan><tspan x="534" dy="18">Resume workflows</tspan><tspan x="534" dy="18">Application tracking</tspan></text>
-
-    <rect x="742" y="462" width="210" height="116" rx="14" fill="#17152d" stroke-width="2" class="private"/>
-    <text x="762" y="490" class="boxTitle">ATS / Job Sources</text>
-    <text x="762" y="516" class="boxText"><tspan x="762" dy="0">Connector architecture</tspan><tspan x="762" dy="18">Selected integrations</tspan><tspan x="762" dy="18">Governed scheduled imports</tspan></text>
-
-    <rect x="970" y="462" width="172" height="116" rx="14" fill="#17152d" stroke-width="2" class="private"/>
-    <text x="990" y="490" class="boxTitle">AI Assistance</text>
-    <text x="990" y="516" class="boxText"><tspan x="990" dy="0">Resume/job analysis</tspan><tspan x="990" dy="18">Suggestions</tspan><tspan x="990" dy="18">Interview prep</tspan></text>
-  </g>
-
-  <text x="58" y="624" class="section" fill="#ffc85a">◐ CURRENTLY STRENGTHENING</text>
-  <rect x="58" y="646" width="1084" height="58" rx="14" fill="#2a2110" stroke="#f6b84a" stroke-width="2"/>
-  <text x="78" y="680" class="boxText">Private-monorepo test coverage · Playwright end-to-end coverage · retry/backoff + connector observability · formal matching evaluation</text>
-
-  <text x="58" y="722" class="small">Public claims map to the recruiter-safe repository. Private and in-progress capabilities remain explicitly separated.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%" font-family="Arial, Helvetica, sans-serif">
+<title>Job Copilot — evidence-aware architecture</title>
+<desc>Public deterministic job ingestion and matching evidence is separated from the verified broader private product implementation.</desc>
+<rect width="1200" height="700" fill="#080b12"/>
+<text x="48" y="58" font-size="28" font-weight="700" fill="#f4f8ff">Job Copilot</text>
+<text x="48" y="84" font-size="15" fill="#9fb0c8">Governed ingestion · deterministic state · semantic matching · bounded AI assistance</text>
+<line x1="48" y1="104" x2="1152" y2="104" stroke="#24324a"/>
+<text x="48" y="140" font-size="13" font-weight="700" fill="#77f0e6">PUBLIC SHOWCASE</text>
+<g fill="#111927" stroke="#2f6f6b" stroke-width="1.2">
+<rect x="48" y="160" width="205" height="78" rx="10"/><rect x="280" y="160" width="205" height="78" rx="10"/><rect x="512" y="160" width="205" height="78" rx="10"/><rect x="744" y="160" width="205" height="78" rx="10"/><rect x="976" y="160" width="176" height="78" rx="10"/>
+</g>
+<g fill="#e8f0fa" font-size="14" text-anchor="middle">
+<text x="150" y="188"><tspan x="150">Connector policy</tspan><tspan x="150" dy="19">+ normalization</tspan></text><text x="382" y="188"><tspan x="382">Freshness</tspan><tspan x="382" dy="19">classification</tspan></text><text x="614" y="188"><tspan x="614">Cross-source</tspan><tspan x="614" dy="19">deduplication</tspan></text><text x="846" y="188"><tspan x="846">Deterministic</tspan><tspan x="846" dy="19">skill matching</tspan></text><text x="1064" y="188"><tspan x="1064">19 tests</tspan><tspan x="1064" dy="19">+ CI</tspan></text>
+</g>
+<text x="48" y="286" font-size="13" font-weight="700" fill="#b795ff">VERIFIED BROADER PRIVATE IMPLEMENTATION</text>
+<g fill="#111927" stroke="#554681" stroke-width="1.2">
+<rect x="48" y="306" width="340" height="270" rx="12"/><rect x="430" y="306" width="340" height="270" rx="12"/><rect x="812" y="306" width="340" height="270" rx="12"/>
+</g>
+<g fill="#f4f8ff" font-size="16" font-weight="700">
+<text x="68" y="340">Product &amp; data</text><text x="450" y="340">Runtime &amp; AI</text><text x="832" y="340">Identity &amp; delivery</text>
+</g>
+<g fill="#cbd7e6" font-size="14">
+<text x="68" y="376">• Next.js / React / TypeScript</text><text x="68" y="406">• 11-entity PostgreSQL / Prisma model</text><text x="68" y="436">• pgvector semantic matching</text><text x="68" y="466">• resume + application workflows</text><text x="68" y="496">• authoritative lifecycle state</text>
+<text x="450" y="376">• Redis workers</text><text x="450" y="406">• Kafka ingestion / workflow events</text><text x="450" y="436">• LiteLLM model routing</text><text x="450" y="466">• async FastAPI services</text><text x="450" y="496">• latency / token / cost tracing</text>
+<text x="832" y="376">• OAuth2 / OIDC / JWT</text><text x="832" y="406">• SSO-ready integration patterns</text><text x="832" y="436">• Vercel frontend delivery</text><text x="832" y="466">• AWS / Kubernetes / Helm</text><text x="832" y="496">• Terraform infrastructure</text>
+</g>
+<rect x="48" y="610" width="1104" height="54" rx="10" fill="#101827" stroke="#38527a"/>
+<text x="68" y="634" font-size="13" fill="#9fb0c8">EVIDENCE BOUNDARY</text>
+<text x="250" y="642" font-size="16" font-weight="700" fill="#f4f8ff">Deterministic state remains authoritative over AI-assisted workflows</text>
 </svg>
