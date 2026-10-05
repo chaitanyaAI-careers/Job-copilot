@@ -1,12 +1,10 @@
 # Engineering Roadmap
 
-## Implemented Foundation
+## Verified Broader Implementation
 
 ### Product
 
-- Next.js / React product architecture
-- TypeScript application layer
-- authentication foundations
+- Next.js / React / TypeScript product architecture
 - candidate profiles
 - resume workflows
 - job browsing
@@ -15,74 +13,66 @@
 
 ### Data
 
-- PostgreSQL / Prisma persistence
-- job-source modeling
-- job snapshots
-- connector-run state
+- 11-entity PostgreSQL / Prisma source-of-truth model
+- PostgreSQL / pgvector semantic matching
+- job-source and freshness modeling
 - application lifecycle state
-- resume/job analysis state
+- resume / job analysis state
 
 ### Job Ingestion
 
 - ATS connector architecture
 - normalized job contracts
 - complete board fetching
-- source ownership
-- source attribution
-- job freshness observations
-- trusted feed freshness logic
+- source ownership and attribution
+- trusted freshness logic
 - cross-source deduplication
-- board discovery
-- board probing
-- Workable integration
-- SmartRecruiters integration
+- board discovery / probing
+- selected ATS integrations
 - governed scheduled imports
-- job-pipeline orchestration
-- employment-arrangement detection
+- Redis-backed workers
+- Kafka event-driven ingestion and workflow events
 
-### Candidate Intelligence
+### AI / Backend / Identity
 
-- resume parsing
-- deterministic resume/job matching
-- missing-keyword analysis
-- job-specific resume workflows
-- optional AI-assisted suggestions
+- LiteLLM-routed AI assistance
+- async FastAPI services
+- OAuth2/OIDC/JWT identity patterns
+- SSO-ready integration boundaries
+- observable model latency / token / cost / fallback behavior
 
-### Verification
+### Delivery
 
-The private project contains deterministic verification commands for:
+- Vercel frontend delivery
+- Dockerized services
+- AWS-oriented infrastructure
+- Kubernetes / Helm deployment patterns
+- Terraform infrastructure definition
 
-- resume parsing
-- resume/job matching
-- connector text cleanup
-- connector normalization
-- complete connector fetching
-- job-data pipeline behavior
-- job freshness
-- feed freshness
+### Public Verification
+
+The recruiter-safe public showcase contains:
+
+- deterministic job normalization
+- connector-policy decisions
+- freshness classification
 - cross-source deduplication
-- employment-arrangement detection
-- Prisma validation
-- TypeScript
-- ESLint
-- production builds
+- deterministic candidate matching
+- representative React UI
+- 19 Vitest cases across seven files
+- strict TypeScript verification
+- GitHub Actions CI
 
-The Career showcase separately provides Vitest and strict TypeScript verification for recruiter-safe examples.
+## Current Evidence-Building Priorities
 
-## Currently Strengthening
+- formal matching-quality benchmarks
+- broader workflow-completion metrics
+- additional end-to-end product tests
+- queue, retry, and latency measurements
+- operational dashboards and alert thresholds
+- more public-safe implementation examples where appropriate
 
-- formal Vitest service/unit coverage in the private monorepo
-- Playwright end-to-end coverage
-- retry and backoff
-- connector observability
-- structured logging
-- metrics and alerting
-- security hardening
-- formal resume/job matching evaluation
-- AI-assisted match evaluation
-- production deployment maturity
-
-## Later
+## Later Product Direction
 
 - broader connector coverage
 - stronger recommendation evaluation
@@ -92,8 +82,4 @@ The Career showcase separately provides Vitest and strict TypeScript verificatio
 
 ## Portfolio Positioning
 
-Job Copilot is intended to demonstrate:
-
-> **production-style full-stack product engineering with data ingestion, reliability controls, deterministic intelligence, and applied AI workflows.**
-
-It complements the agentic and pharmaceutical AI projects by demonstrating a different engineering signal: building and operating an actual software product rather than only an AI subsystem.
+Job Copilot demonstrates production-style full-stack AI product engineering with governed data ingestion, deterministic state, semantic matching, reliability controls, and bounded AI assistance.
