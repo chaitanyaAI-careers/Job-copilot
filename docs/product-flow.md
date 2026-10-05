@@ -13,13 +13,14 @@ Profile
 ## Job Intelligence
 
 Job Source
+→ Connector Policy
 → Fetch
-→ Validate
 → Normalize
-→ Deduplicate
-→ Freshness Check
-→ Store
-→ Match
+→ Freshness Evaluation
+→ Cross-Source Deduplication
+→ PostgreSQL / Prisma Source of Truth
+→ Deterministic + pgvector Matching
+→ Candidate Intelligence
 
 ## AI Assistance
 
@@ -33,4 +34,18 @@ Representative use cases include:
 - application preparation
 - interview preparation
 
-Deterministic validation and structured application state remain separate from generated content.
+The broader private implementation routes AI assistance through observable model/provider boundaries.
+
+## Authority Boundary
+
+Deterministic application logic remains authoritative for:
+
+- connector eligibility
+- freshness
+- deduplication
+- permissions and consent
+- application lifecycle state
+- persisted product state
+- workflow transitions
+
+AI-generated content can assist the user, but it does not silently replace authoritative product state.
