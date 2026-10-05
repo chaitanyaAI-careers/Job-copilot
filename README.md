@@ -318,6 +318,8 @@ Current private-development areas documented by the project include:
 ### Data
 
 - PostgreSQL / Prisma persistence
+- 11-entity relational source-of-truth model
+- PostgreSQL / pgvector semantic matching
 - job-source modeling
 - job snapshots
 - connector-run state
@@ -338,16 +340,19 @@ Current private-development areas documented by the project include:
 - governed scheduled imports
 - pipeline orchestration
 - employment-arrangement detection
+- Redis-backed background workers
+- Kafka event-driven ingestion and workflow events
 
 ### Candidate Intelligence
 
 - resume parsing
 - deterministic resume/job matching
+- pgvector semantic matching
 - missing-keyword analysis
 - job-specific resume workflows
-- optional AI-assisted suggestions
+- LiteLLM-routed AI assistance with observable provider/fallback behavior
 
-The public repository intentionally does not reproduce the complete private product source tree, Prisma schema, migration history, production data, or credentials.
+The broader private product also includes OAuth2/OIDC/JWT identity with SSO-ready integration patterns, async FastAPI services, model-call tracing for latency/token/cost behavior, and Vercel plus AWS/Kubernetes/Helm/Terraform delivery. The public repository intentionally does not reproduce the complete private product source tree, Prisma schema, migration history, production data, deployment configuration, or credentials.
 
 ---
 
@@ -435,9 +440,13 @@ The separately maintained product includes engineering around:
 - **React**
 - **TypeScript**
 - **Prisma**
-- **PostgreSQL / Supabase**
-- **authentication**
-- **Vercel-oriented deployment**
+- **PostgreSQL / pgvector / Prisma**
+- **Redis / Kafka**
+- **LiteLLM**
+- **OAuth2 / OIDC / JWT**
+- **FastAPI**
+- **Vercel**
+- **AWS / Kubernetes / Helm / Terraform**
 - **job-source / ATS integrations**
 - **AI-assisted resume and career workflows**
 
@@ -525,20 +534,18 @@ The public repository contains only synthetic examples and no production credent
 
 ## Currently Strengthening
 
-The broader private product is currently strengthening:
+The strongest remaining work is expanding measurable product evidence rather than basic architecture completion.
 
-- formal Vitest service/unit coverage in the private monorepo
-- Playwright end-to-end coverage
-- retry / backoff
-- connector observability
-- structured logging
-- metrics / alerting
-- security hardening
-- formal resume/job matching evaluation
-- AI-assisted match evaluation
-- production deployment maturity
+Current focus areas include:
 
-These items are active engineering directions and are **not presented as completed public-showcase capabilities**.
+- formal matching-quality evaluation
+- broader workflow-completion benchmarks
+- additional end-to-end test coverage
+- queue, retry, and latency measurements
+- stronger operational dashboards and alert thresholds
+- additional public-safe examples where implementation boundaries allow
+
+These items are active evidence-building work and are **not presented as completed public-showcase capabilities**.
 
 ---
 
@@ -639,7 +646,7 @@ Related portfolio areas include:
 
 **Chaitanya Sai — Applied AI Engineer**
 
-Generative AI · LLM Applications · RAG · Agentic AI · AI Platform & Backend Engineering
+Generative AI · LLM Applications · Agentic AI · RAG · AI Platform & Backend · AI Product Engineering
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-111827?style=flat-square&logo=vercel&logoColor=white)](https://chaitanya-sai-portfolio.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/chaitanyaAI-careers)
